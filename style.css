@@ -1,13 +1,13 @@
 ﻿/* ===== ЦВЕТА И ШРИФТЫ ===== */
 :root {
   --bg-dark: #14201A;
-  --bg-light: #EDE4CF:
-  --text-dark: #14201A;
+  --bg-light: #EDE4CF: --text-dark: #14201A;
   --text-light: #EAE3D2;
   --accent-gold: #B89968;
   --accent-gold-hover: #D3B585;
   --btn-text: #0E1411;
 }
+
 /* ===== БАЗА ===== */
 * {
   margin: 0;
@@ -24,7 +24,9 @@ body {
 }
 
 /* ===== КОНТЕЙНЕР ===== */
-header, section, footer {
+header,
+section,
+footer {
   max-width: 800px;
   margin: 0 auto;
   padding: 30px 20px;
@@ -77,8 +79,9 @@ button:hover {
 button:active {
   transform: scale(0.98);
 }
+
 /* ===== СЕКЦИИ ===== */
-section  {
+section {
   background: #EAE0C8;
   border: 1px solid #D6C9A8;
   border-radius: 16px;
@@ -166,73 +169,81 @@ footer {
 
 /* ===== Всплывающее окно с мессенджерами ===== */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
-    background-color: #EAE0C8;
-    margin: 15% auto;
-    padding: 25px;
-    border: 2px solid #D6C9A8;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-    position: relative;
+  background-color: #EAE0C8;
+  margin: 15% auto;
+  padding: 25px;
+  border: 2px solid #D6C9A8;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
 }
 
 .close-button {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    color: #2B3C2A;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    line-height: 1;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #2B3C2A;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
 }
 
 .close-button:hover {
-    color: #4A5D3A;
+  color: #4A5D3A;
 }
 
 .messenger-links {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .messenger-link {
-    display: block;
-    padding: 12px;
-    text-decoration: none;
-    color: #EAE3D2;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  color: #EAE3D2;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .messenger-link:hover {
-    transform: scale(1.03);
-    opacity: 0.9;
+  transform: scale(1.03);
+  opacity: 0.9;
 }
 
-.telegram { background-color: #0088cc; }
-.viber    { background-color: #7360f2; }
-.whatsapp { background-color: #25D366; }
+.telegram {
+  background-color: #3B7F8C;
+}
+
+.viber {
+  background-color: #766B91;
+}
+
+.whatsapp {
+  background-color: #4F8A68;
+}
 
 .modal-content h3 {
-    color: #4A5D3A;
-    margin-top: 5px;
-    margin-bottom: 10px;
+  color: #4A5D3A;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 /* ===== КАЛЬКУЛЯТОР ===== */
@@ -263,7 +274,7 @@ footer {
 }
 
 #calculator select,
-#calculator input  {
+#calculator input {
   width: 100%;
   padding: 14px;
   margin-top: 6px;
@@ -280,7 +291,7 @@ footer {
 }
 
 #calculator select:focus,
-#calculator input:focus  {
+#calculator input:focus {
   outline: none;
   border-color: #B89968;
   background: #EAE0C8;
@@ -295,7 +306,7 @@ footer {
   margin-top: 24px;
   font-size: 22px;
   font-weight: 700;
-  color:  #EAE3D2;
+  color: #EAE3D2;
   text-align: center;
 }
 
@@ -308,6 +319,26 @@ footer {
   font-weight: 600;
   letter-spacing: 0.3px;
 }
+
+.gallery-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: inherit;
+}
+
+.gallery-item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &>img {
+    object-fit: cover;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(13, 13, 13, 0.7);
+  }
+}
+
 
 
 /* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
