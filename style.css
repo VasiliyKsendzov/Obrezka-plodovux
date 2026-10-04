@@ -332,14 +332,13 @@ footer {
   &:not(:last-child) {
     margin-bottom: 20px;
   }
-  &>img {
-    object-fit: cover;
-    width: 100%;
-    box-shadow: 0 5px 10px rgba(13, 13, 13, 0.7);
-  }
 }
 
-
+.gallery-item img {
+  object-fit: cover;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(13, 13, 13, 0.7);
+}
 
 /* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
 @media (max-width: 600px) {
