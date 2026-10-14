@@ -29,7 +29,7 @@ header,
 section,
 footer {
   width: 100%;
-  min-width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 30px 20px;
 }
